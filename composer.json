@@ -1,0 +1,35 @@
+{
+    "name": "quickhelper/quickexcelimport",
+    "description": "A Laravel package for importing Excel files into Eloquent models with support for Filament",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "yossef ashraf",
+            "email": "yossefff2001@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=8.0",
+        "illuminate/support": ">=8.0",
+        "phpoffice/phpspreadsheet": ">=1.20",
+        "filament/filament": ">=3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "QuickExcelImport\\ExcelImport\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "QuickExcelImport\\ExcelImport\\ExcelImportServiceProvider"
+            ],
+            "aliases": {
+                "ExcelImport": "QuickExcelImport\\ExcelImport\\Facades\\ExcelImport"
+            }
+        }
+    }
+}
